@@ -26,8 +26,7 @@ import { FuncionarioService } from './funcionario.service';
   // providers: [ { provide: FuncionarioService, useFactory: criarFuncionarioService } ],
   providers: [
     FuncionarioService,
-    LogService,
-    { provide: 'LogPrefixo', useValue: 'LOG' }
+    LogService
   ],
   bootstrap: [AppComponent]
 })
