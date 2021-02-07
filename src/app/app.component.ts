@@ -1,3 +1,4 @@
+import { FuncionarioService } from './funcionario.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'moneyApiFront';
+
+  funcionarios = [];
+
+  constructor(private service: FuncionarioService) {
+  }
+
+  ngOnInit() {
+    this.funcionarios = this.service.consultar();
+  }
+
 }
